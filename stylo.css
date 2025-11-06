@@ -1,0 +1,326 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+header {
+  background-color: #003366;
+  padding: 1em;
+  color: white;
+}
+
+.contenedor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.busqueda-navegacion {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.form-busqueda {
+  display: flex;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.form-busqueda input {
+  padding: 0.5em;
+  border: none;
+  outline: none;
+}
+
+.form-busqueda button {
+  background-color: white;
+  border: none;
+  padding: 0 0.8em;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu li a:hover {
+  color: #66aaff;
+}
+
+.pagina {
+  display: flex;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.contenido-principal {
+  flex: 1;
+}
+
+.info-escuela h1 {
+  font-size: 2rem;
+  color: #003366;
+}
+
+.direccion, .telefono, .correo {
+  margin-top: 0.5em;
+  font-size: 1.1rem;
+}
+
+.descripcion {
+  margin-top: 1.5em;
+  padding: 1em 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.descripcion h2 {
+  color: #003366;
+  margin-bottom: 0.5em;
+}
+
+.destacados {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 1.5em;
+}
+
+.tarjeta {
+  background: white;
+  flex: 1 1 200px;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(1, 119, 236);
+  text-align: center;
+}
+
+.oferta h2 {
+  color: #003366;
+  margin-top: 1.5em;
+}
+
+.oferta ul {
+  padding-left: 1.2em;
+  color: #555;
+}
+
+.oferta li {
+  margin-bottom: 0.5em;
+}
+
+.contacto-fijo {
+  position: sticky;
+  top: 100px;
+  flex: 0 0 300px;
+  background: #e7f0ff;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 51, 102, 0.25);
+  height: fit-content;
+}
+
+.contacto-fijo h2 {
+  text-align: center;
+  color: #003366;
+}
+
+.icono-carta {
+  font-size: 2em;
+  text-align: center;
+  margin: 0.5em 0;
+  color: #003366;
+}
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.formulario-contacto fieldset {
+  border: none;
+  margin-top: 0.5em;
+}
+
+.boton {
+  background-color: #0056d2;
+  color: white;
+  padding: 0.7em;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1em;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: #0044aa;
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 2em 1em;
+  margin-top: 3em;
+}
+
+.footer-contenido {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.redes-sociales a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.redes-sociales a:hover {
+  color: #66aaff;
+}
+
+.mapa-escuela {
+  margin-top: 2em;
+  background-color: #ffffff;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.mapa-escuela h2 {
+  font-size: 1.5em;
+  color: #003366;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.mapa-contenedor {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(1, 119, 236, 0.5);
+}
+
+.mapa-contenedor iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+}
+.btn-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .pagina {
+    flex-direction: column;
+  }
+
+  .contacto-fijo {
+    position: static;
+    width: 100%;
+    margin-top: 2em;
+  }
+}
+
+@media (max-width: 700px) {
+  .contenedor-header {
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  .busqueda-navegacion {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .btn-menu {
+    display: block;
+  }
+
+  nav .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #00264d;
+    width: 100%;
+    padding: 1em;
+    border-radius: 8px;
+  }
+
+  nav .menu.activo {
+    display: flex;
+  }
+
+  nav .menu li a {
+    padding: 0.5em 0;
+    display: block;
+  }
+
+  .destacados {
+    flex-direction: column;
+  }
+
+  .contenido-principal h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .form-busqueda input {
+    width: 100px;
+  }
+}

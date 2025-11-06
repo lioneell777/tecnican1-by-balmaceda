@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Escuela Técnica N°1 Grand Bourg</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylo.css" />
+</head>
+<body>
+
+<header>
+  <div class="contenedor-header">
+    <img src="https://pbs.twimg.com/profile_images/1450511899175661568/lBp8fvJf_400x400.jpg" alt="Logo Escuela" class="logo" />
+
+    <button class="btn-menu" onclick="document.querySelector('.menu').classList.toggle('activo')">☰</button>
+
+    <div class="busqueda-navegacion">
+      <form class="form-busqueda">
+        <input type="text" placeholder="Buscar...">
+        <button type="submit">🔍</button>
+      </form>
+      <nav>
+        <ul class="menu">
+          <li><a href="pagina.html">Inicio</a></li>
+          <li><a href="registro.html">Solicitar Vacante</a></li>
+          <li><a href="https://www2.malvinasargentinas.gob.ar/web/blog/leo-nardini-visito-la-escuela-tecnica-n1-de-grand-/">Noticias</a></li>
+          <li><a href="ejemplos.html">Ejemplos inf/elec</a></li>
+          <li><a href="https://www.instagram.com/08lioneel/" target="_blank">Creador Web</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="pagina">
+  <main class="contenido-principal">
+    <section class="info-escuela">
+      <h1>Escuela Secundaria Técnica N.º 1 General José de San Martín</h1>
+      <p class="direccion">Dirección: 299, Batalla de Chacabuco 249, Grand Bourg, Provincia de Buenos Aires</p>
+      <p class="telefono">Teléfono: 02320 48-0129</p>
+      <p class="correo">Email: info@tecnica1grandbourg.edu.ar</p>
+    </section>
+
+    <section class="descripcion">
+      <h2>Sobre la Escuela</h2>
+      <p>
+        La Escuela Técnica N°1 Grand Bourg ofrece una educación de calidad en formación técnica y científica.
+      </p>
+      <p>
+        En relación con el dictado del nivel secundario en la institución Escuela Secundaria Técnica N° 1 “General José de San Martín” de Grand Bourg, tiene por objeto profundizar los saberes, habilidades y valores...
+      </p><br>
+      <p>
+            En relación con el dictado del nivel secundario en la institución Escuela Secundaria Técnica N° 1 “General José de San Martín” de Grand Bourg, tiene por objeto profundizar los saberes, habilidades y valores en función de las áreas de conocimiento del mundo social y del trabajo, así como habilitar para cursar el nivel superior. Constituye una unidad pedagógica obligatoria destinada a adolescentes, jóvenes y adultos que hayan aprobado el nivel primario. Tiene una duración de 5 o 6 años (en el caso de la educación técnica). Consta de dos ciclos; el ciclo básico -con contenidos curriculares comunes- y el ciclo orientado -de carácter especializado según las distintas áreas del conocimiento y del mundo del trabajo
+      </p>
+    </section>
+
+    <section class="destacados">
+      <div class="tarjeta">
+        <h3>Ciclo Lectivo</h3>
+        <p>2025</p>
+      </div>
+      <div class="tarjeta">
+        <h3>Turnos</h3>
+        <p>Matutino y Vespertino</p>
+      </div>
+      <div class="tarjeta">
+        <h3>Modalidad</h3>
+        <p>Presencial</p>
+      </div>
+      <div class="tarjeta">
+        <h3>Inscripciones</h3>
+        <p>Cerradas</p>
+      </div>
+    </section>
+
+   <section class="mapa-escuela">
+  <h2>Ubicación del Colegio</h2>
+  <div class="mapa-contenedor">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.612821191646!2d-58.72162969999999!3d-34.5004331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca2bbef32b5ab%3A0x1aeacec650a97ef3!2sEscuela%20Secundaria%20T%C3%A9cnica%20N.%C2%BA%201%20General%20Jos%C3%A9%20de%20San%20Mart%C3%ADn!5e0!3m2!1ses-419!2sar!4v1720707200000!5m2!1ses-419!2sar" 
+      width="100%" 
+      height="350" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+    <section class="oferta">
+      <h2>Oferta Educativa</h2>
+      <ul>
+        <li>Técnico en Electrónica</li>
+        <li>Técnico en Informática</li>
+        <li>Robótica</li>
+      </ul>
+    </section>
+  </main>
+
+  <aside class="contacto-fijo">
+    <h2>Contactar al colegio</h2>
+    <div class="icono-carta">&#9993;</div>
+    <form class="formulario-contacto">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required>
+      
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" required>
+
+      <label for="gmail">Gmail:</label>
+      <input type="email" id="gmail" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" required>
+
+      <label for="whatsapp">WhatsApp:</label>
+      <input type="tel" id="whatsapp" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" rows="4" required></textarea>
+
+      <fieldset>
+        <legend>¿Cómo prefieres que te respondamos?</legend>
+        <label><input type="radio" name="respuesta" value="whatsapp" required> WhatsApp</label>
+        <label><input type="radio" name="respuesta" value="gmail" required> Gmail</label>
+      </fieldset>
+
+      <button type="submit" class="boton">Enviar</button>
+    </form>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-contenido">
+    <p>© 2025 Escuela Técnica N°1 Grand Bourg - Todos los derechos reservados</p>
+    <div class="redes-sociales">
+      <a href="https://www.instagram.com/tecnica1grandbourg/?hl=es" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" width="20" /> Instagram
+      </a>
+      <a href="https://wa.me/542320480129" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20" /> 02320 48-0129
+      </a>
+      <a href="https://mail.google.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" width="20" /> Gmail
+      </a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

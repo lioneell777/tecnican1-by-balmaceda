@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulario</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <div class="logo-info">
+      <img src="https://pbs.twimg.com/profile_images/1450511899175661568/lBp8fvJf_400x400.jpg" alt="Logo" class="logo" />
+      <div class="school-info">
+        <h2 class="school-name">ESCUELA DE EDUCACIÓN SECUNDARIA TÉCNICA N°1 Gral Jose de San Martin</h2>
+        <span class="año">Año: 2025</span>
+      </div>
+    </div>
+    <div class="search-container">
+      <input type="text" placeholder="Buscar alumno... (En desarrollo)" />
+      <button onclick="alert('Aun en desarrollo 😅')">🔍</button>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="sidebar" id="sidebar">
+  <a href="pagina.html">Inicio</a>
+  <a href="#contacto">Contacto</a>
+  <a href="#ayuda">Ayuda</a>
+  <a href="#terminos">Términos y Condiciones</a>
+</div>
+
+<main>
+  <h1 class="form-title">Anotación/registro</h1>
+
+  <form>
+    <fieldset>
+      <legend>Información Personal</legend>
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required autofocus />
+
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" required />
+
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" required />
+
+      <label for="genero">Género:</label>
+      <select id="genero" required>
+        <option value="">Seleccionar</option>
+        <option>Masculino</option>
+        <option>Femenino</option>
+        <option>Otro</option>
+      </select>
+
+      <label for="nacimiento">Fecha de nacimiento:</label>
+      <input type="date" id="nacimiento" required />
+
+      <label for="color">Color favorito:</label>
+      <input type="color" id="color" required />
+
+      <label for="ciudad">Ciudad (Estación Belgrano Norte):</label>
+      <select id="ciudad" required>
+        <option value="">Seleccionar estación</option>
+        <option>Retiro</option>
+        <option>Ciudad Universitaria</option>
+        <option>Aristóbulo del Valle</option>
+        <option>Florida</option>
+        <option>Munro</option>
+        <option>Carapachay</option>
+        <option>Villa Adelina</option>
+        <option>Boulogne Sur Mer</option>
+        <option>Don Torcuato</option>
+        <option>Los Polvorines</option>
+        <option>Grand Bourg</option>
+        <option>Tierras Altas</option>
+        <option>Tortuguitas</option>
+        <option>Del Viso</option>
+        <option>Villa Rosa</option>
+        <option>Villa de Mayo</option>
+        <option>Adolfo Sourdeaux</option>
+      </select>
+
+      <label for="extra">Algo más que quieras agregar:</label>
+      <textarea id="extra" rows="3" required></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>Información de Contacto</legend>
+
+      <label for="email">Gmail:</label>
+      <input type="email" id="email" required />
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" required />
+
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" required />
+    </fieldset>
+
+    <fieldset>
+      <legend>Seleccioná tu curso</legend>
+      <label for="curso">Quiero anotarme en:</label>
+      <select id="curso" required>
+        <option value="">Seleccionar curso</option>
+        <option>1ro 1era</option>
+        <option>1ro 2da</option>
+        <option>1ro 3ra</option>
+        <option>1ro 4ta</option>
+        <option>1ro 5ta</option>
+        <option>1ro 6ta</option>
+      </select>
+    </fieldset>
+
+    <button type="submit" class="button">Registrar</button>
+  </form>
+</main>
+
+<footer>
+  <h3>Multimedia</h3>
+  <audio controls>
+    <source src="audio.mp3" type="audio/mp3" />
+  </audio>
+
+  <video controls width="320">
+    <source src="video.mp4" type="video/mp4" />
+  </video>
+
+ <footer>
+  <div class="footer-contenido">
+    <p>© 2025 Escuela Técnica N°1 Grand Bourg - Todos los derechos reservados</p>
+    <div class="redes-sociales">
+      <a href="https://www.instagram.com/tecnica1grandbourg/?hl=es" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" width="20" /> Instagram
+      </a>
+      <a href="https://wa.me/542320480129" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20" /> 02320 48-0129
+      </a>
+      <a href="https://mail.google.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" width="20" /> Gmail
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const sidebar = document.getElementById('sidebar');
+
+ 
+  menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    sidebar.classList.toggle('active');
+  });
+  document.addEventListener('click', (e) => {
+    const target = e.target;
+    if (!sidebar.contains(target) && target !== menuToggle) {
+      sidebar.classList.remove('active');
+    }
+  });
+</script>
+
+</body>
+</html>

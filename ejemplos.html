@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de lo visto en informática</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .barra {
+            background-color: #add8e6; 
+            color: #000;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .contenedor {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        table {
+            width: 300px;
+            border-collapse: collapse;
+            background-color: #f9f9f9;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #ffcccb; 
+        }
+
+        .imc {
+            width: 300px;
+            padding: 20px;
+            background-color: #e0ffe0; 
+            text-align: center;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+        }
+
+        .iphone-mapa {
+            display: block;
+            margin: 40px auto;
+            max-width: 100%;
+        }
+
+        /* estilos para la sección de electrónica */
+        .barra-electronica {
+            background-color: #90ee90;
+            color: #000;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+
+        .circuitos {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .circuitos div {
+            width: 300px;
+            margin: 10px;
+            padding: 15px;
+            background-color: #f0f8ff;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .circuitos img {
+            max-width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .descripcion {
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="barra">Ejercicios HTML</div>
+
+    <div class="contenedor">
+        <div>
+            <h2>Lista de Productos</h2>
+            <table>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td>Notebook</td>
+                    <td>$500.000</td>
+                </tr>
+                <tr>
+                    <td>Memoria RAM 8gb</td>
+                    <td>$12.300</td>
+                </tr>
+                <tr>
+                    <td>Disco Duro HDD 512gb</td>
+                    <td>$34.800</td>
+                </tr>
+                <tr>
+                    <td>Teclado Redragon</td>
+                    <td>$47.500</td>
+                </tr>
+            </table>
+        </div>
+        <div class="imc">
+            <h2>Calcular el IMC</h2>
+            <p id="resultado"></p>
+        </div>
+    </div>
+
+    <h2 style="text-align:center;">Haz clic en las cámaras de los iPhones</h2>
+    <img src="https://www.apple.com/v/iphone/home/cb/images/meta/iphone__kqge21l9n26q_og.png" usemap="#mapa" alt="iPhones" class="iphone-mapa">
+
+    <map name="mapa">
+        <area shape="circle" coords="120,170,30" href="https://www.apple.com/iphone/" alt="iPhone Blanco">
+        <area shape="circle" coords="300,150,30" href="https://www.apple.com/ios/" alt="iPhone Azul - Cámara 1">
+        <area shape="circle" coords="320,250,30" href="https://www.apple.com/ios/" alt="iPhone Azul - Cámara 2">
+        <area shape="circle" coords="500,120,30" href="https://www.apple.com/iphone/" alt="iPhone Dorado - Cámara 1">
+        <area shape="circle" coords="550,200,30" href="https://www.apple.com/iphone/" alt="iPhone Dorado - Cámara 2">
+        <area shape="circle" coords="500,280,30" href="https://www.apple.com/iphone/" alt="iPhone Dorado - Cámara 3">
+    </map>
+
+    <script>
+        let peso = parseFloat(prompt("Ingrese su peso en Kg: "));
+        let altura = parseFloat(prompt("Ingrese su altura en metros: "));
+        let imc = peso / (altura * altura);
+        let clasificacion = "";
+
+        if (imc < 18.5) {
+            clasificacion = "Bajo peso";
+        } else if (imc >= 18.5 && imc < 24.9) {
+            clasificacion = "Peso Normal";
+        } else if (imc >= 25 && imc < 29.9) {
+            clasificacion = "Sobrepeso";
+        } else {
+            clasificacion = "Obesidad";
+        }
+
+        let resultado = "IMC: " + imc.toFixed(2) + " - Clasificación: " + clasificacion;
+        document.getElementById("resultado").innerText = resultado;
+        alert(resultado);
+    </script>
+    <div class="barra-electronica">Ejercicios de Electrónica</div>
+
+    <div class="circuitos">
+        <div>
+            <h3>Circuito LED con resistencia</h3>
+            <img src="https://i.ytimg.com/vi/GUESpG6inds/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD9xdf5HRKrPshKnifQSXo6C6FoSA" alt="Circuito LED ejemplo">
+            <p class="descripcion">Este circuito muestra un LED conectado en serie con una resistencia para limitar la corriente. Se debe calcular el valor de la resistencia según la fuente y la corriente deseada.</p>
+        </div>
+        <div>
+            <h3>Esquema genérico de circuito electrónico</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1c-b6w1AacOkheZjNO7ByPVBWQzO9S3duyw&s" alt="Circuito genérico">
+            <p class="descripcion">Es un diagrama esquemático de componentes electrónicos conectados (resistencias, cables, nodos). Puede servir para ejercicios de análisis de circuito.</p>
+        </div>
+    </div>
+
+</body>
+</html>
