@@ -12,9 +12,7 @@
 <header>
   <div class="contenedor-header">
     <img src="https://pbs.twimg.com/profile_images/1450511899175661568/lBp8fvJf_400x400.jpg" alt="Logo Escuela" class="logo" />
-
     <button class="btn-menu" onclick="document.querySelector('.menu').classList.toggle('activo')">☰</button>
-
     <div class="busqueda-navegacion">
       <form class="form-busqueda">
         <input type="text" placeholder="Buscar...">
@@ -45,13 +43,12 @@
     <section class="descripcion">
       <h2>Sobre la Escuela</h2>
       <p>
-        La Escuela Técnica N°1 Grand Bourg ofrece una educación de calidad en formación técnica y científica.
+        La Escuela Secundaria Técnica N.º 1 “General José de San Martín” de Grand Bourg es una institución pública y mixta, ubicada en Batalla de Chacabuco 249, en el Partido de Malvinas Argentinas, Provincia de Buenos Aires. Se especializa en formación técnica con orientación en Informática y Electrónica, brindando una educación integral con sólida base científica, tecnológica y práctica.
       </p>
+      <h3>Historia</h3>
       <p>
-        En relación con el dictado del nivel secundario en la institución Escuela Secundaria Técnica N° 1 “General José de San Martín” de Grand Bourg, tiene por objeto profundizar los saberes, habilidades y valores...
-      </p><br>
-      <p>
-            En relación con el dictado del nivel secundario en la institución Escuela Secundaria Técnica N° 1 “General José de San Martín” de Grand Bourg, tiene por objeto profundizar los saberes, habilidades y valores en función de las áreas de conocimiento del mundo social y del trabajo, así como habilitar para cursar el nivel superior. Constituye una unidad pedagógica obligatoria destinada a adolescentes, jóvenes y adultos que hayan aprobado el nivel primario. Tiene una duración de 5 o 6 años (en el caso de la educación técnica). Consta de dos ciclos; el ciclo básico -con contenidos curriculares comunes- y el ciclo orientado -de carácter especializado según las distintas áreas del conocimiento y del mundo del trabajo
+        La escuela fue creada oficialmente en la década de 1970 con el objetivo de ofrecer formación técnica a los jóvenes de Grand Bourg y zonas cercanas. En sus inicios, funcionaba con talleres básicos de electricidad y mecánica, pero con el paso de los años se amplió incorporando laboratorios, aulas nuevas y equipamiento moderno.  
+        Hoy forma parte del sistema de Educación Técnica de la Provincia de Buenos Aires y continúa honrando el legado de su nombre, el General José de San Martín, promoviendo el esfuerzo, la disciplina y el trabajo colaborativo.
       </p>
     </section>
 
@@ -60,42 +57,39 @@
         <h3>Ciclo Lectivo</h3>
         <p>2025</p>
       </div>
+
       <div class="tarjeta">
         <h3>Turnos</h3>
-        <p>Matutino y Vespertino</p>
+        <p>Matutino, Tarde y Vespertino</p>
       </div>
+
       <div class="tarjeta">
         <h3>Modalidad</h3>
         <p>Presencial</p>
       </div>
+
       <div class="tarjeta">
-        <h3>Inscripciones</h3>
-        <p>Cerradas</p>
+        <h3>Oferta Educativa</h3>
+        <p>Informática</p>
+        <p>Electrónica</p>
       </div>
     </section>
 
-   <section class="mapa-escuela">
-  <h2>Ubicación del Colegio</h2>
-  <div class="mapa-contenedor">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.612821191646!2d-58.72162969999999!3d-34.5004331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca2bbef32b5ab%3A0x1aeacec650a97ef3!2sEscuela%20Secundaria%20T%C3%A9cnica%20N.%C2%BA%201%20General%20Jos%C3%A9%20de%20San%20Mart%C3%ADn!5e0!3m2!1ses-419!2sar!4v1720707200000!5m2!1ses-419!2sar" 
-      width="100%" 
-      height="350" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </div>
-</section>
+    <section class="destacados">
+      <div class="tarjeta" id="tarjeta-inscripciones">
+        <h3>Inscripciones</h3>
+        <p id="estadoInscripciones">Cerradas</p>
+        <button id="btnVerFecha" class="boton">Ver fecha de apertura</button>
+      </div>
+    </section>
 
-    <section class="oferta">
-      <h2>Oferta Educativa</h2>
-      <ul>
-        <li>Técnico en Electrónica</li>
-        <li>Técnico en Informática</li>
-        <li>Robótica</li>
-      </ul>
+    <section class="mapa-escuela">
+      <h2>Ubicación del Colegio</h2>
+      <div class="mapa-contenedor">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.612821191646!2d-58.72162969999999!3d-34.5004331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca2bbef32b5ab%3A0x1aeacec650a97ef3!2sEscuela%20Secundaria%20T%C3%A9cnica%20N.%C2%BA%201%20General%20Jos%C3%A9%20de%20San%20Mart%C3%ADn!5e0!3m2!1ses-419!2sar!4v1720707200000!5m2!1ses-419!2sar" 
+          width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
     </section>
   </main>
 
@@ -149,6 +143,27 @@
   </div>
 </footer>
 
+<script>
+  const fechaApertura = new Date('2026-02-20T00:00:00');
+  const hoy = new Date();
+  const estado = document.getElementById('estadoInscripciones');
+  const btnVer = document.getElementById('btnVerFecha');
+  const contenedor = document.getElementById('tarjeta-inscripciones');
+
+  btnVer.addEventListener('click', () => {
+    alert('Las inscripciones se abrirán el 20/02/2026');
+  });
+
+  if (hoy >= fechaApertura) {
+    estado.textContent = 'Abiertas';
+    btnVer.style.display = 'none';
+    const btnIns = document.createElement('button');
+    btnIns.textContent = 'Inscribirse';
+    btnIns.className = 'boton-inscribir';
+    btnIns.onclick = () => { location.href = 'registro.html'; };
+    contenedor.appendChild(btnIns);
+  }
+</script>
+
 </body>
 </html>
-
