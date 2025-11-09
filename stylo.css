@@ -122,6 +122,21 @@ header {
   box-shadow: 0 0 10px rgb(1, 119, 236);
   text-align: center;
 }
+    .destacados {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .boton-inscribir, #btnVerFecha {
+      margin-top:8px;
+      padding:8px 12px;
+      border-radius:6px;
+      border:0;
+      cursor:pointer;
+    }
+    #btnVerFecha { background:#0b63e6; color:#fff; }
+    .boton-inscribir { background:#0aa84f; color:#fff; }
 
 .oferta h2 {
   color: #003366;
@@ -193,7 +208,6 @@ header {
   background-color: #0044aa;
 }
 
-/* Footer */
 footer {
   background-color: #003366;
   color: white;
@@ -259,6 +273,7 @@ footer {
   color: white;
   cursor: pointer;
 }
+
 
 @media (max-width: 900px) {
   .pagina {
